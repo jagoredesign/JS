@@ -1,14 +1,14 @@
 (function(mod) {
   if (typeof exports == "object" && typeof module == "object") // CommonJS
-    mod(require("../../lib/jagoredesign"));
+    mod(require("../../lib/codemirror"));
   else if (typeof define == "function" && define.amd) // AMD
-    define(["../../lib/jagoredsign"], mod);
+    define(["../../lib/codemirror"], mod);
   else // Plain browser env
-    mod(JagoRedesign);
-})(function(JagoRedesign) {
+    mod(CodeMirror);
+})(function(CodeMirror) {
 "use strict";
 
-JagoRedesign.defineMode("xml", function(config, parserConfig) {
+CodeMirror.defineMode("xml", function(config, parserConfig) {
   var indentUnit = config.indentUnit;
   var multilineTagIndentFactor = parserConfig.multilineTagIndentFactor || 1;
   var multilineTagIndentPastTag = parserConfig.multilineTagIndentPastTag;
@@ -326,7 +326,7 @@ JagoRedesign.defineMode("xml", function(config, parserConfig) {
         else
           return state.indented + indentUnit;
       }
-      if (context && context.noIndent) return JagoRedesign.Pass;
+      if (context && context.noIndent) return CodeMirror.Pass;
       if (state.tokenize != inTag && state.tokenize != inText)
         return fullLine ? fullLine.match(/^(\s*)/)[0].length : 0;
       // Indent the starts of attribute names.
@@ -373,9 +373,9 @@ JagoRedesign.defineMode("xml", function(config, parserConfig) {
   };
 });
 
-JagoRedesign.defineMIME("text/xml", "xml");
-JagoRedsign.defineMIME("application/xml", "xml");
-if (!JagoRedesign.mimeModes.hasOwnProperty("text/html"))
-  Jagoredesign.defineMIME("text/html", {name: "xml", htmlMode: true});
+CodeMirror.defineMIME("text/xml", "xml");
+CodeMirror.defineMIME("application/xml", "xml");
+if (!CodeMirror.mimeModes.hasOwnProperty("text/html"))
+  CodeMirror.defineMIME("text/html", {name: "xml", htmlMode: true});
 
 });
