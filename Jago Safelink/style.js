@@ -1,34 +1,22 @@
-<!--
-
-//By Jagoredesign.com
-
-var message="Hmm!.. Mau Copy Paste, CTRL+U, dan Klik Kanan Jangan Disini";
-
-///////////////////////////////////
-function clickIE4(){
-if (event.button==2){
-alert(message);
-return false;
+<script type='text/javascript'>
+//<![CDATA[
+//Script Redirect CTRL + U
+//https://mungkur.com/ ganti dengan url blog kalian
+function redirectCU(e) {
+  if (e.ctrlKey && e.which == 85) {
+    window.location.replace("https://mungkur.com/");
+    return false;
+  }
 }
-}
+document.onkeydown = redirectCU;
 
-function clickNS4(e){
-if (document.layers||document.getElementById&&!document.all){
-if (e.which==2||e.which==3){
-alert(message);
-return false;
+//Script Redirect Klik Kanan
+function redirectKK(e) {
+  if (e.which == 3) {
+    window.location.replace("https://mungkur.com/");
+    return false;
+  }
 }
-}
-}
-
-if (document.layers){
-document.captureEvents(Event.MOUSEDOWN);
-document.onmousedown=clickNS4;
-}
-else if (document.all&&!document.getElementById){
-document.onmousedown=clickIE4;
-}
-
-document.oncontextmenu=new Function("alert(message);return false")
-
-// -->
+document.oncontextmenu = redirectKK;
+//]]>
+</script>
