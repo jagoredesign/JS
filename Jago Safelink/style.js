@@ -30,21 +30,4 @@ document.onmousedown=clickIE4;
 
 document.oncontextmenu=new Function("alert(message);return false")
 
-///////////////////////////////////
-function redirectCU(e) {
-  if (e.ctrlKey && e.which == 85) {
-    window.location.replace("//jagoredesign.com/");
-    return false;
-  }
-}
-document.onkeydown = redirectCU;
-
-function redirectKK(e) {
-  if (e.which == 3) {
-    window.location.replace("//jagoredesign.com/");
-    return false;
-  }
-}
-document.oncontextmenu = redirectKK;
-
 // -->
