@@ -1,7 +1,9 @@
+oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;' ondragstart='return false' onselectstart='return false' style='-moz-user-select: none; cursor: default;'
 <!--
-// by jagoredesign.com
 
-var message="Hmm! Keciduk ni.. Maaf Situs ini dilarang untuk Copy-Paste, CTRL+U, dan Klik Kanan";
+//By Jagoredesign.com
+
+var message="Hmm!.. Mau Copy Paste, CTRL+U, dan Klik Kanan Jangan Disini";
 
 ///////////////////////////////////
 function clickIE4(){
