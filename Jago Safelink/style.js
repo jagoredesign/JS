@@ -1,4 +1,3 @@
-oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;' ondragstart='return false' onselectstart='return false' style='-moz-user-select: none; cursor: default;'
 <!--
 
 //By Jagoredesign.com
